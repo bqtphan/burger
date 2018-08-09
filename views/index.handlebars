@@ -1,0 +1,26 @@
+<img src="https://www.burgerlounge.com/home/lounge-hero-trim-lettuce-v3.png" style="height: 200px; width=auto">
+
+<h1>Eat-Da-Burger</h1>
+
+<ul>
+    {{#each burger_name}}
+        {{#unless eaten}}
+            {{> burger_name/burger-block eaten=false}}
+        {{/unless}}
+    {{/each}}
+</ul>
+
+<p>Eaten</p>
+
+<ul>
+    {{#each burger_name}}
+        {{#if eaten}}
+            {{> burgers/burger-block eaten=false}}
+        {{/if}}
+    {{/each}}
+</ul>
+
+<input type="form" id="addBurger">
+<button id="submitButton">Submit</button>
+
+<p>Enter the burger you want to eat and click the Submit button</p>
